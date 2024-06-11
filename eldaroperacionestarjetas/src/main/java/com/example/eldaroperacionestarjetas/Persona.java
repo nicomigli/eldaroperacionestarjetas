@@ -36,7 +36,7 @@ public class Persona {
         if (montoConsumido.compareTo(BigDecimal.valueOf(1000)) < 0){
         return true;
     }
-    else{
+        else{
         return false;
     }
     }

@@ -72,11 +72,11 @@ public abstract class Tarjeta {
     }
 
     public abstract HashMap<String,BigDecimal> tasa() throws Exception;
-    protected String getInfo(){
+    public String getInfo(){
         return "DATOS TARJETA : MARCA " + this.marca + " NUMERO DE TARJETA " + this.numeroTarjeta + " CARDHOLDER " + this.getCardholder() + " FECHA VENCIMIENTO " + this.fechaVencimiento ;    
     };
 
-    protected Boolean validaParaOperar(){
+    public Boolean validaParaOperar(){
        LocalDate localDate = LocalDate.now();
        if (fechaVencimiento.isAfter(localDate)){
         return true;
@@ -86,7 +86,7 @@ public abstract class Tarjeta {
        }
     };
 
-    protected Boolean esDistintaA(Tarjeta tarjeta){
+    public Boolean esDistintaA(Tarjeta tarjeta){
         if(tarjeta.numeroTarjeta == this.numeroTarjeta){
             return false;
         }
