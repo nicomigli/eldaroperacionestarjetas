@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-import com.example.Persona;
-
 public abstract class Tarjeta {
     protected int idTarjeta;
     protected String marca;
